@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+📘 README – Høstlig Søk i JSON-filer
+
+Dette prosjektet består av en enkel nettside som lar deg søke etter tekststrenger i én eller flere JSON-filer. Resultatene vises på samme side, med et design inspirert av høstens farger og fjordenes blå.
+
+📂 Filstruktur
+
+index.html
+style.css
+fact.json
+djt.json
+
+🔧 Hvordan legge til nye JSON-filer
+
+Opprett en ny .json-fil i samme mappe som index.html. Eksempel: quotes.json
+
+[
+  "Dette er en ny linje.",
+  "Her kan du legge inn flere tekster."
+]
+
+Åpne index.html og finn JavaScript-delen:
+
+const files = ["fact.json", "djt.json", "nyfil.json"];
+
+Legg til filnavnet i arrayen:
+
+const files = ["fact.json", "djt.json", "nyfil.json", "quotes.json"];
+
+Dropdownen (<select>) fylles automatisk med alle filene i files-arrayen. Du trenger ikke endre HTML manuelt.
+
+🔍 Slik fungerer søket
+
+Velg en fil i dropdownen, eller velg Alle filer for å søke i alle samtidig.
+
+Skriv inn et søkeord i boksen og trykk Søk.
+
+Treff vises gruppert per fil, med høstlige farger og fjordblå bakgrunn.
+
+💡 Tips
+
+Bruk korte, enkle tekstlinjer i JSON-filene (hver linje som et element i arrayen).
+
+Husk at JSON må være gyldig: alle strenger i anførselstegn, komma mellom elementene, og hele filen omsluttet av [ og ].
+
+Hvis du får problemer med lasting, sjekk at filnavnet i arrayen stemmer nøyaktig med filnavnet på serveren.
+
+🍂 Med dette oppsettet kan du enkelt utvide med flere filer uten å endre HTML-strukturen – bare legg til filnavnet i files-arrayen, så dukker det opp i menyen.
+</body>
+</html>

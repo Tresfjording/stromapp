@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Test strømpris</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; }
+    #resultat span { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Strømpristest</h1>
+  <div id="resultat">Resultat:</div>
+  <button onclick="visPris(0.42)">Test lav pris (0.42)</button>
+  <button onclick="visPris(0.85)">Test middels pris (0.85)</button>
+  <button onclick="visPris('feil')">Test feil input</button>
+
+  <script>
+    function visPris(pris) {
+      let emoji = "⚡";
+      let farge = "black";
+
+      if (pris < 0.5) {
+        emoji = "🟢";
+        farge = "green";
+      } else if (pris < 1.0) {
+        emoji = "🟠";
+        farge = "orange";
+      } else {
+        emoji = "🔴";
+        farge = "red";
+      }
+
+      const resultat = document.getElementById("resultat");
+
+      if (typeof pris === "number") {
+        resultat.innerHTML += `<br><span style="color:${farge}">${emoji} Nåværende pris: ${pris.toFixed(2)} kr/kWh</span>`;
+      } else {
+        console.log("Pris er:", pris, "Type:", typeof pris);
+        resultat.innerHTML += '<br>⚠️ Klarte ikke hente strømpris akkurat nå.';
+      }
+    }
+  </script>
+</body>
+</html>
