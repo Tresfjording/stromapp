@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../thoth"
+		},
+		{
+			"path": "../tippelag"
+		},
+		{
+			"path": "../tippesjekk"
+		},
+		{
+			"path": "../tippetipsing"
+		},
+		{
+			"path": "../tresfjording"
+		},
+		{
+			"path": "../tresfjording_samling"
+		},
+		{
+			"path": "../zadig"
+		},
+		{
+			"path": "../zyclus"
+		}
+	],
+	"settings": {}
+}
