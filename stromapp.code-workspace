@@ -26,6 +26,12 @@
 		},
 		{
 			"path": "../zyclus"
+		},
+		{
+			"path": "../soccerpred"
+		},
+		{
+			"path": "../stps"
 		}
 	],
 	"settings": {}
